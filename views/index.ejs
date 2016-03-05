@@ -4,9 +4,10 @@
     <% include partials/head.ejs %>
 </head>
 
-<body>
+<body class="<%= classname %>">
     <div class="container">
-        <h1><%= title%> <%= apptitle %></h1>
+        <h1><%= apptitle %></h1>
+        <h2><%= title%></h2>
     </div> <!-- container -->
 
     <% include partials/footer.ejs %>
