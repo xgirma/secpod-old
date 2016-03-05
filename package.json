@@ -1,0 +1,19 @@
+{
+  "name": "secpod",
+  "version": "1.0.0",
+  "description": "A security podcast directory built using express.js and node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xgirma/secpod.git"
+  },
+  "author": "Girma Nigusse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xgirma/secpod/issues"
+  },
+  "homepage": "https://github.com/xgirma/secpod#readme"
+}
