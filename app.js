@@ -1,21 +1,33 @@
 var express = require('express');
 var app = express();
 
+app.set('view engine', 'ejs');
+
+app.locals.apptitle = 'Security Podcast Directory';
+
 app.get('/', function(request, response){
-    response.send('<h1> Security Podcast directory</h1>');
+    response.render('index', {
+        title: this.apptitle
+    });
 });
 
 app.get('/list', function(request, response){
-    response.send('<h1> Security Podcast directory</h1>');
+    response.render('list', {
+        title: 'Podcast List'
+    });
 });
 
 app.get('/list/:name', function(request, response){
     var name = request.params.name;
-    response.send('<h1>' + name + ' podcast ...</h1>');
+    response.render('detail', {
+        title: name + "'s Podcast Detail"
+    });
 });
 
 app.get('*', function(request, response){
-    response.send('<h1> bad route ... </h1>');
+    response.render('badroute',{
+        title: 'You are lost create a podcast :) ...'
+    });
 });
 
 var server = app.listen('3000', function(){
