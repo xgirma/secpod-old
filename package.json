@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/xgirma/secpod/issues"
   },
-  "homepage": "https://github.com/xgirma/secpod#readme"
+  "homepage": "https://github.com/xgirma/secpod#readme",
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  }
 }
