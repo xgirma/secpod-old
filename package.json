@@ -18,5 +18,8 @@
   "homepage": "https://github.com/xgirma/secpod#readme",
   "devDependencies": {
     "nodemon": "^1.9.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
