@@ -8,6 +8,8 @@ var routes = require('./routes/index');
 
 var app = express();
 
+app.locals.apptitle = 'Security Podcast Directory';
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
