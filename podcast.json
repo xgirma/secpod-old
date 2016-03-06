@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Liquidmatrix Security Digest Podcast",
+    "rss": "http://liquidmatrix.libsyn.com/rss",
+    "logo": "http://static.libsyn.com/p/assets/1/2/5/5/12553a6a7fa29ae3/LSD_logo_headphone-1400.png",
+    "episode":[
+      {
+        "no": "66",
+        "url": "http://www.liquidmatrix.org/blog/2016/03/02/liquidmatrix-security-digest-podcast-episode-66/",
+        "title": "Liquidmatrix Security Digest Podcast - Episode 66",
+        "pubDate": "Thu, 03 Mar 2016 04:39:21 +0000",
+        "audio":"http://traffic.libsyn.com/liquidmatrix/LSDPodcast-0x66.mp3",
+        "type": "audio/mpeg",
+        "":"So the rest of the gang are out playing in either San Fran or Calgary. You get what’s left over – actual security professionals doing actual security work. ..."
+      },
+      {
+        "no": "65",
+        "url": "https://www.liquidmatrix.org/blog/2016/02/17/liquidmatrix-security-digest-podcast-episode-65/",
+        "title": "Liquidmatrix Security Digest Podcast - Episode 65",
+        "pubDate": "Wed, 17 Feb 2016 22:51:18 +0000",
+        "audio":"http://traffic.libsyn.com/liquidmatrix/LSDPodcast-0x65.mp3",
+        "type": "audio/mpeg",
+        "about":"Thanks Matt-Dave, this is Ben-Jamie for episode 0x65 (82 for those of you not good with the hexa-ma-decimal) and we’re down a bunch of peope tonight but that’s okay because we’re super committed (except Wil, he’s doing who knows what somewhere). Tonight we’ve got a lot of news about vulns and then a brief stroll through the cybers, derps and mailbags before calling it a night. Hey Matt, what’s in the news? ..."
+      },
+      {
+        "no": "64",
+        "url": "http://www.liquidmatrix.org/blog/2016/02/10/liquidmatrix-security-digest-podcast-episode-64/",
+        "title": "Liquidmatrix Security Digest Podcast - Episode 64",
+        "pubDate": "Wed, 10 Feb 2016 20:15:59 +0000",
+        "audio":"http://traffic.libsyn.com/liquidmatrix/LSDPodcast-0x64.mp3",
+        "type": "audio/mpeg",
+        "about":"Yup, back again. Actually a thing. There’s even some people here to talk to you about security things. And whining. Also, fuck you Skype. ..."
+      }
+    ]
+  },
+
+  {
+    "name": "Paul's Security Weekly",
+    "rss": "http://podcast.securityweekly.com/rss",
+    "logo": "http://static.libsyn.com/p/assets/d/9/b/b/d9bbc6230f13475e/SecurityWeekly-1000x1000-nourl.png",
+    "episode":[
+      {
+        "no": "454",
+        "url": "http://securityweekly.com/portfolio/security-weekly/",
+        "title": "Security Weekly #454 - Paul's Big News, Perimeter Protection w/ InGuardians",
+        "pubDate": "Fri, 04 Mar 2016 19:36:58 +0000",
+        "audio":"http://traffic.libsyn.com/pauldotcom/Security_Weekly_Episode_454_-_March_3_2016.mp3",
+        "type": "audio/mpeg",
+        "about": "This week, Paul makes a big announcement! We are lucky to have several of the fine folks at InGuardians come on the show and share their wisdom and knowledge on the topic of perimeter protection. Stories of the week include DROWN, cool tools for..."
+      },
+      {
+        "no":"453",
+        "url":"http://securityweekly.com/portfolio/security-weekly/",
+        "title":"Security Weekly #453 - Jeff Frisk &amp; Jeff Pike, Global Information Assurance Certification",
+        "pubDate": "Fri, 26 Feb 2016 16:28:13 +0000",
+        "audio":"http://traffic.libsyn.com/pauldotcom/Security_Weekly_Episode_453_-_February_25_2016.mp3",
+        "type":"audio/mpeg",
+        "about":"This week on Security Weekly we interview Jeff Pike and Jeff Frisk from SANS GIAC. Paul and Larry talk about digital badges, CPEs, and SANS training. On Security Weekly, Paul, Larry, and Mike talk about the Hacker Summer Camp Planning Guide, Open DNS Blogs, wireless mics and keyboards, and excessive amounts of lube! The best place to get information about security! Stay tuned for the best in security news."
+      }
+    ]
+  },
+
+  {
+    "name":"Crypto-Gram Security Podcast",
+    "rss":"http://dhenage.libsyn.com/rss",
+    "logo":"http://static.libsyn.com/p/assets/6/8/5/9/68597cfbe7341f0d/padlock.jpg",
+    "episode":[
+      {
+        "no":"0215",
+        "url":"https://www.schneier.com/crypto-gram/archives/2016/0215.html",
+        "title":"Crypto-Gram 15 February 2016",
+        "pubDate": "Thu, 03 Mar 2016 23:45:17 +0000",
+        "audio":"http://traffic.libsyn.com/dhenage/crypto-gram-16-02.mp3",
+        "type":"audio/mpeg",
+        "about":"The Internet of Things Will Be the World's Biggest Robot | Integrity and Availability Threats | Security vs. Surveillance ..."
+      },
+      {
+        "no":"0115",
+        "url":"https://www.schneier.com/crypto-gram/archives/2016/0115.html",
+        "title":"Crypto-Gram 15 January 2016",
+        "pubDate": "Fri, 15 Jan 2016 08:21:00 +0000",
+        "audio":"http://traffic.libsyn.com/dhenage/crypto-gram-16-01.mp3",
+        "type":"audio/mpeg",
+        "about":"The Internet of Things that Talk About You Behind Your Back | Using Law against Technology | DMCA and the Internet of Things ..."
+      }
+    ]
+  },
+
+  {
+    "name":"Down the Security Rabbithole",
+    "rss":"http://podcast.wh1t3rabbit.net/rss",
+    "logo":"http://static.libsyn.com/p/assets/9/7/3/a/973ac42c0206e093/LOGO_white-rabbit_square.gif",
+    "episode":[
+      {
+        "no":"183",
+        "url":"http://podcast.wh1t3rabbit.net/dtsr-episode-183-newscast-for-march-1st-2016",
+        "title":"DtSR Episode 183 - NewsCast for March 1st 2016",
+        "pubDate": "Tue, 01 Mar 2016 15:55:10 +0000",
+        "audio":"http://traffic.libsyn.com/ftwr/DtSR_Episode_183_-_NewsCast_for_March_1st_2016.mp3",
+        "type":"audio/mpeg",
+        "about":"This is RSA Conference week, so while Rafal is out in San Francisco trying to make it through another one, James and Michael break down the news events that you may have missed. ..."
+      },
+      {
+        "no":"182",
+        "url":"http://podcast.wh1t3rabbit.net/dtsr-episode-182-apple-versus-the-fbi",
+        "title":"DtSR Episode 182 - Apple Versus the FBI",
+        "pubDate": "Tue, 23 Feb 2016 16:12:49 +0000",
+        "audio":"http://traffic.libsyn.com/ftwr/DtSR_Episode_182_-_Apple_Versus_the_FBI.mp3",
+        "type":"audio/mpeg",
+        "about":"Michael and I moderate what turns out to be an expert-filled panel discussion on the real issues of the Apple vs FBI debate ..."
+      }
+    ]
+  },
+
+  {
+    "name":"Security Now",
+    "rss":"http://leo.am/podcasts/sn",
+    "logo":"http://twit.cachefly.net/coverart/sn/sn144audio.jpg",
+    "episode":[
+      {
+        "no":"548",
+        "url":"http://www.podtrac.com/pts/redirect.mp3/twit.cachefly.net/audio/sn/sn0548/sn0548.mp3",
+        "title":"SN 548: DDoS Attack Mitigation",
+        "pubDate": "Tue, 23 Feb 2016 18:17:02 -0800",
+        "audio":"http://www.podtrac.com/pts/redirect.mp3/twit.cachefly.net/audio/sn/sn0548/sn0548.mp3",
+        "type":"audio/mpeg",
+        "about":"Hosts: Leo Laporte, Steve Gibson Apple vs the FBI, Linux Mint, more Comodo bad news, Hollywood Presbyterian Medical Center pays Crypto ransom, Glibc flaw follow-up ..."
+      },
+      {
+        "no":"547",
+        "url":"http://www.podtrac.com/pts/redirect.mp3/twit.cachefly.net/audio/sn/sn0547/sn0547.mp3",
+        "title":"SN 547: GRC is DOWN",
+        "pubDate": "Tue, 16 Feb 2016 18:44:42 -0800",
+        "audio":"http://www.podtrac.com/pts/redirect.mp3/twit.cachefly.net/audio/sn/sn0547/sn0547.mp3",
+        "type":"audio/mpeg",
+        "about":"Hosts: Leo Laporte, Steve Gibson Steve and Leo talk about what is happening to the grc.com website and how a DDoS attack brings down a website. Download or subscribe to this show at ..."
+      }
+    ]
+  }
+]
