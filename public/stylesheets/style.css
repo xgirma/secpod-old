@@ -1,8 +1,6 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
+.bgimage {
+  background-image: url('../images/IMG_3582.JPG');
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
 }
