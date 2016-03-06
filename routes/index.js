@@ -15,4 +15,10 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/list', function(req, res, next) {
+  res.render('list', {
+    title: 'Directory'
+  });
+});
+
 module.exports = router;
