@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
   });
 
   res.render('index', {
+    page: 'index',
     title: 'Security Podcast Directory',
     name: podcastname
   });
@@ -17,6 +18,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/list', function(req, res, next) {
   res.render('list', {
+    page: 'list',
     title: 'Directory'
   });
 });
