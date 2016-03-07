@@ -10,23 +10,26 @@
     <div class="row">
         <div class="col-md-8">
             <p>Girma Nigusse (2016)</p>
-            <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="#">Featured</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="tab" class="active"><a href="#featured" role="tab" data-toggle="tab">Featured</a></li>
+                <li role="tab"><a href="#news" role="tab" data-toggle="tab">News</a></li>
             </ul>
+            <div class="tab-content">
+                <% include partials/content/featured.ejs%>
+                <% include partials/content/news.ejs%>
+            </div>
         </div>
         <div class="col-md-4">
-            <h3> <i class="fa fa-bars"></i> Selected</h3>
+            <h3><i class="fa fa-bars"></i> Selected</h3>
             <div class="container-fluid">
                 <% if(name.length > 0){ %>
                 <% for(i=0; i < name.length; i++){ %>
-                    <p><%=name[i]%></p>
+                <p><%= name[i] %></p>
                 <% } %>
                 <% } %>
             </div>
         </div>
     </div>
-
 
     <% include partials/template/footer.ejs %>
     <% include partials/template/jsdefaults.ejs %>
