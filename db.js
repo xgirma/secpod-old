@@ -16,7 +16,7 @@ exports.connect = function(url, done){
             return done(err);
         }
 
-        console.log('Connected to mongodb');
+        console.log('Connected to Mongodb');
         state.db = db;
         done();
     });

@@ -3,7 +3,7 @@
 <head>
     <% include partials/template/head.ejs %>
 </head>
-<body class="<%= page %>">
+<body>
 <div class="container-fluid">
     <% include partials/template/header.ejs %>
     <% include partials/template/navpod.ejs %>
@@ -22,9 +22,9 @@
         <div class="col-md-4">
             <h3><span class="glyphicon glyphicon-equalizer"></span></i> Selected</h3>
             <div class="container-fluid">
-                <% if(name.length > 0){ %>
-                <% for(i=0; i < name.length; i++){ %>
-                <p><%= name[i] %></p>
+                <% if(podcast.length > 0){ %>
+                <% for(i=0; i < podcast.length; i++){ %>
+                <p><%= podcast[i].rss %></p>
                 <% } %>
                 <% } %>
             </div>

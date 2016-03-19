@@ -1,18 +1,25 @@
 var express = require('express');
 var router = express.Router();
-var appdata = require('../podcast.json');
+var Podcast = require('../models/podcast');
 
 router.get('/', function(req, res, next) {
-  var podcastname = [];
+  Podcast.all(function(err, docs){
+    if(err){
+      console.log('Error rendering ...');
+    }
 
-  appdata.podcast.forEach(function(item){
-    podcastname = podcastname.concat(item.name)
-  });
+    Podcast.featured(function(err, doc){
+      if(err){
+        console.log('Error rendering ...');
+      }
 
-  res.render('index', {
-    page: 'index',
-    title: 'Security Podcast Directory',
-    name: podcastname
+      res.render('index', {
+        page: 'index',
+        title: 'Security Podcast Directory',
+        podcast: docs,
+        featured: doc
+      });
+    });
   });
 });
 

@@ -5,10 +5,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var db = require('./db');
+var url = 'mongodb://podcast:p0dc45t@ds015889.mlab.com:15889/podcast';
 
 var app = express();
-
-app.locals.appdata = require('./podcast.json');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -50,6 +50,12 @@ app.use(function(err, req, res, next) {
     message: {},
     error: {}
   });
+});
+
+db.connect(url, function(err){
+  if(err){
+    console.log('Unable to connect to Mongodb');
+  }
 });
 
 

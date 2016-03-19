@@ -6,10 +6,10 @@
         <p>(2016)</p>
         <p>Featured episode:</p>
         <audio controls>
-            <source src="http://traffic.libsyn.com/liquidmatrix/LSDPodcast-0x66.mp3" type="audio/mpeg"/>
-            <a href="https://www.liquidmatrix.org/blog/2016/03/02/liquidmatrix-security-digest-podcast-episode-66/">liquidmatrix</a>
+            <source src="<%= featured[0].audio %>" type="audio/mpeg"/>
+            <a href="<%= featured[0].url %>">liquidmatrix</a>
         </audio>
-        <h3 align="center"><%= appdata.podcast[0].episode[0].title%></h3>
+        <p align="center"><%= featured[0].title %></p>
     </div>
     </div>
 </header>
