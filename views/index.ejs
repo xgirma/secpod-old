@@ -20,14 +20,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <h3><span class="glyphicon glyphicon-equalizer"></span></i> Selected</h3>
-            <div class="container-fluid">
-                <% if(podcast.length > 0){ %>
-                <% for(i=0; i < podcast.length; i++){ %>
-                <p><%= podcast[i].rss %></p>
-                <% } %>
-                <% } %>
-            </div>
+            <% include partials/template/selected.ejs %>
         </div>
     </div>
 

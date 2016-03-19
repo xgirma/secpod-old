@@ -1,0 +1,8 @@
+<h3><span class="glyphicon glyphicon-equalizer"></span></i> Selected</h3>
+<div class="container-fluid">
+    <% if(selected.length > 0){ %>
+    <% for(i=0; i < selected.length; i++){ %>
+    <p><%= selected[i].author %> : <%= selected[i].episode %></p>
+    <% } %>
+    <% } %>
+</div>
