@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <% if(selected.length > 0){ %>
     <% for(i=0; i < selected.length; i++){ %>
-    <p><%= selected[i].author %> : <%= selected[i].episode %></p>
+    <p><span class="glyphicon glyphicon-play"></span> <%= selected[i].author %> : <%= selected[i].episode %></p>
     <% } %>
     <% } %>
 </div>
