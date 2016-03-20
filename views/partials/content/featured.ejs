@@ -1,3 +1,14 @@
 <div role="tabepanel" class="tab-pane active" id="featured">
-    <p>Featured: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <br>
+    <p>  </p>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h2 class="panel-title"> <%= featured[0].author %> : <%= featured[0].episode %></h2>
+            <p>Published: <%= featured[0].pub_date %></p>
+            <p class="panel-title"> <%= featured[0].intro %></p>
+        </div>
+        <div class="panel-footer">
+            &raquo; <a href="<%= featured[0].url %>" target="_blank"> Source: <%= featured[0].url %></a>
+        </div>
+    </div>
 </div>
