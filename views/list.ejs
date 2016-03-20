@@ -4,10 +4,38 @@
     <% include partials/template/head.ejs %>
 </head>
 <body class="<%= page %>">
+<div class="container-fluid">
     <% include partials/template/header.ejs %>
-    <p> test ...</p>
+    <% include partials/template/navplayer.ejs %>
+    <div class="row">
+        <div class="col-md-12">
+            <% if(podcast.length > 0){ %>
+            <% for(var i=0; i < podcast.length; i++){ %>
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading"><%= podcast[i].pub_date %> : <%= podcast[i].author %></div>
+                <div class="panel-body">
+                    <p><%= podcast[i].intro %></p>
+                </div>
+
+                <!-- List group -->
+                <ul class="list-group">
+                    <li class="list-group-item">Episode: <%= podcast[i].episode %></li>
+                    <li class="list-group-item">Title: <%= podcast[i].title %></li>
+                    <li class="list-group-item">Audio: <%= podcast[i].audio %></li>
+                    <li class="list-group-item">RSS: <%= podcast[i].rss %></li>
+                    <li class="list-group-item">URL: <%= podcast[i].url %></li>
+                    <li class="list-group-item">Rating: <%= podcast[i].rating %></li>
+                </ul>
+            </div>
+            <% } %>
+            <% } %>
+
+        </div>
+    </div>
 
     <% include partials/template/footer.ejs %>
     <% include partials/template/jsdefaults.ejs %>
+</div>
 </body>
 </html>
