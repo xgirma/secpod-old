@@ -5,10 +5,10 @@
             <br>
             <p>Playing episode:</p>
             <audio controls>
-                <source src="" type="audio/mpeg"/>
-                <a href=""></a>
+                <source src="<%= podcast[0].audio %>" type="audio/mpeg"/>
+                <a href="<%= podcast[0].url %>"><%= podcast[0].author %></a>
             </audio>
-            <p align="center">Title ...</p>
+            <p align="center"><%= podcast[0].title %></p>
         </div>
     </div>
 </div>
