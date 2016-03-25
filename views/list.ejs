@@ -31,8 +31,13 @@
                         <div class="panel-body">
                             <p><%= podcast[i].intro %></p>
                             <ul class="list-group">
+
                                 <li class="list-group-item"> <span class="glyphicon glyphicon-play"></span>
-                                    Listen to episode <%= podcast[i].episode %> </li>
+                                    Listen to episode <%= podcast[i].episode %>
+                                    <button onclick="return playSelected('<%= podcast[i].audio %>')">PLAY</button>
+                                    <button onclick="return pauseSelected()">PAUSE</button></li>
+                                </li>
+
                                 <li class="list-group-item">Date: <%= podcast[i].pub_date %></li>
                                 <li class="list-group-item">RSS: <%= podcast[i].rss %></li>
                                 <li class="list-group-item">Rating: <%= podcast[i].rating %></li>
