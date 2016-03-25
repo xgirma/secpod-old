@@ -34,7 +34,7 @@
 
                                 <li class="list-group-item"> <span class="glyphicon glyphicon-play"></span>
                                     Listen to episode <%= podcast[i].episode %>
-                                    <button onclick="return playSelected('<%= podcast[i].audio %>')">PLAY</button>
+                                    <button onclick="return playSelected('<%= podcast[i].audio %>', '<%= podcast[i].title %>')">PLAY</button>
                                     <button onclick="return pauseSelected()">PAUSE</button></li>
                                 </li>
 
