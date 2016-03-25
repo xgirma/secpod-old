@@ -1,7 +1,33 @@
 <div class="jumbotron">
     <div class="container">
-        <h1> <span class="glyphicon glyphicon-equalizer">Secpood</h1>
+        <h1> <span class="glyphicon glyphicon-equalizer"></span>Secpood</h1>
         <p>A directory of selected information security podcasts.</p>
-        <% include ./navpod.ejs %>
+        <div class="row">
+            <div class="col-lg-9">
+                <kbd>Featured: <span class="glyphicon glyphicon-thumbs-up"></span> <%= featured[0].like %> </kbd>
+                <footer><%= featured[0].title %></footer>
+                <footer>by <%= featured[0].author %></footer>
+                <footer>on <%= featured[0].pub_date %></footer>
+            </div>
+            <div class="col-lg-3">
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="wall">
+                            <img src="<%= featured[0].logo %>"
+                                 class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <footer align="center">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <span class="glyphicon glyphicon-stop"></span>
+                        </footer>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
