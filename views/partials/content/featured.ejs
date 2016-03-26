@@ -4,11 +4,12 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <h2 class="panel-title"> <%= featured[0].author %> : <%= featured[0].episode %></h2>
-            <p>Published: <%= featured[0].pub_date %></p>
+            <p><%= featured[0].author %></p>
+            <p><%= featured[0].pub_date %></p>
             <p class="panel-title"> <%= featured[0].intro %></p>
         </div>
         <div class="panel-footer">
-            &raquo; <a href="<%= featured[0].url %>" target="_blank"> Source</a>
+            <p class=text-muted">RSS: <%= featured[0].rss %></p>
         </div>
     </div>
 </div>

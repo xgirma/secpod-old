@@ -20,6 +20,7 @@
                 <div class="panel-collapse collapse <%=i === 0 ? 'in': ''%>" id="<%= podcast[i]._id %>"
                      role="tabpanel" aria-labelledby="heading<%= podcast[i]._id %>">
                     <div class="panel-body">
+                        <p class="text-muted"><%= podcast[i].author %></p>
                         <p class="text-muted"><%= podcast[i].pub_date %></p>
                         <p><%= podcast[i].intro %></p>
                         <p class="text-muted">RSS: <%= podcast[i].rss %></p>
