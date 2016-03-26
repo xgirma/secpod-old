@@ -1,7 +1,28 @@
 <div class="jumbotron">
-    <div class="container">
-        <h1><span class="glyphicon glyphicon-equalizer"></span>Secpood</h1>
-        <p>A directory of selected information security podcasts.</p>
-        <% include ./navplayer.ejs %>
-    </div>
+    <h1><span class="glyphicon glyphicon-equalizer"></span>Secpood</h1>
+    <p>A directory of selected information security podcasts.</p>
+    <footer class="text-muted" id="now-playing">Now Playing: </footer>
+    <footer id="selected-title"><%= podcast[0].title %></footer>
+
+    <audio src="<%= podcast[0].audio %>" id="selected-audio">
+        Your browser does not support the audio element.
+    </audio>
+
+    <footer>
+        <button onclick="playSelected(getSelectedAudio(), getSelectedTitle())">
+            Play<span class="glyphicon glyphicon-play"></span>
+        </button>
+
+        <button onclick="stopSelected()">
+            Stop <span class="glyphicon glyphicon-stop"></span>
+        </button>
+    </footer>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $("#now-playing").hide();
+    });
+</script>
+
+

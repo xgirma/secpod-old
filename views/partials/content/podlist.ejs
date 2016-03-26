@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12">
+        <% if(podcast.length > 0){ %>
+        <% for(var i = 0; i < podcast.length; i++){ %>
+
+        <div class="panel-group" id="accordion<%= podcast[i]._id %>"
+             role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading<%= podcast[i]._id %>">
+                    <h4 class="panel-title">
+                        <a href="#<%= podcast[i]._id %>" role="button"
+                           data-toggle="collapse" data-parent="#accordion<%= podcast[i]._id %>"
+                           aria-expanded="false" aria-controls="<%= podcast[i]._id %>">
+                            <%= podcast[i].title %>
+                        </a>
+                    </h4>
+                </div>
+
+
+                <div class="panel-collapse collapse <%=i === 0 ? 'in': ''%>" id="<%= podcast[i]._id %>"
+                     role="tabpanel" aria-labelledby="heading<%= podcast[i]._id %>">
+                    <div class="panel-body">
+                        <p><%= podcast[i].intro %></p>
+                        <ul class="list-group">
+
+                            <li class="list-group-item"> <span class="glyphicon glyphicon-play"></span>
+                                Listen to episode <%= podcast[i].episode %>
+                                <button onclick="return playSelected('<%= podcast[i].audio %>', '<%= podcast[i].title %>')">PLAY</button>
+                                <button onclick="return stopSelected()">STOP</button>
+                            </li>
+
+                            <li class="list-group-item">Date: <%= podcast[i].pub_date %></li>
+                            <li class="list-group-item">RSS: <%= podcast[i].rss %></li>
+                            <li class="list-group-item">Rating: <%= podcast[i].rating %></li>
+                            <li class="list-group-item"><a href="<%= podcast[i].url %>" target="-_blank">Source</a> </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <% } %>
+        <% } %>
+    </div>
+    <br><br><br>
+</div>

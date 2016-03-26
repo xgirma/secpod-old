@@ -1,25 +1,41 @@
-var a     = document.getElementById('navaudio');
-var t     = document.getElementById('navaudiotitle');
-var aa     = document.getElementById('homenaveaudio');
+/* home page */
+var homeaudio = document.getElementById('homenaveaudio');
+
+function playFeatured() {
+  homeaudio.load();
+  homeaudio.play();
+}
+
+function stopFeatured() {
+  homeaudio.pause();
+}
+
+/* list page */
+var listaudio = document.getElementById('selected-audio');
+var listtitle = document.getElementById('selected-title');
+var nowplaying = document.getElementById('now-playing');
 
 function playSelected(audio, title) {
-  console.log(' ... ', audio );
-  console.log(' ... ', title );
-  a.setAttribute('src', audio);
-  a.load();
-  t.innerHTML = title;
-  a.play();
+  console.log(' ... ', audio);
+  console.log(' ... ', title);
+  listaudio.setAttribute('src', audio);
+  listaudio.load();
+  listtitle.innerHTML = title;
+  listaudio.play();
+  nowplaying.style.display = "block";
 }
 
-function pauseSelected(){
-  a.pause();
+function stopSelected() {
+  listaudio.pause();
+  nowplaying.style.display = "none";
 }
 
-function playFeatured(){
-  aa.load();
-  aa.play();
+function getSelectedAudio(){
+  return listaudio.getAttribute('src');
 }
 
-function stopFeatured(){
-  aa.pause();
+function getSelectedTitle(){
+  return listtitle.innerHTML;
 }
+
+
