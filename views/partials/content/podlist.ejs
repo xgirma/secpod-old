@@ -20,19 +20,21 @@
                 <div class="panel-collapse collapse <%=i === 0 ? 'in': ''%>" id="<%= podcast[i]._id %>"
                      role="tabpanel" aria-labelledby="heading<%= podcast[i]._id %>">
                     <div class="panel-body">
-                        <p class="text-muted"><%= podcast[i].author %></p>
+                        <p class="text-muted">
+                            <%= podcast[i].author %>
+                        </p>
                         <p class="text-muted"><%= podcast[i].pub_date %></p>
                         <p><%= podcast[i].intro %></p>
                         <p class="text-muted">RSS: <%= podcast[i].rss %></p>
                         <p>
                             <a onclick="return playSelected('<%= podcast[i].audio %>', '<%= podcast[i].title %>')">
-                                <span class="glyphicon glyphicon-play"></span> Play
+                                <span class="glyphicon glyphicon-play"></span>
                             </a>
                             <a onclick="return stopSelected()">
-                                <span class="glyphicon glyphicon-stop"></span> Stop
+                                <span class="glyphicon glyphicon-stop"></span>
                             </a>
                             <a onclick="return stopSelected()">
-                                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                                Like
                             </a>
                         </p>
                     </div>
