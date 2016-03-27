@@ -16,7 +16,7 @@ exports.featured = function(cb){
 
   collection.find()
     .limit(1)
-    .skip(Math.floor(Math.random() * 9))
+    .skip(Math.floor(Math.random() * 18))
     .toArray(function(err, docs){
       cb(err, docs);
   });
