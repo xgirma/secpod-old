@@ -3,10 +3,22 @@
     <p>  </p>
     <div class="panel panel-default">
         <div class="panel-body">
-            <h2 class="panel-title"> <%= featured[0].author %> : <%= featured[0].episode %></h2>
-            <p><%= featured[0].author %></p>
-            <p><%= featured[0].pub_date %></p>
-            <p class="panel-title"> <%= featured[0].intro %></p>
+            <h2 class="panel-title"> <%= featured[0].title %></h2>
+            <p class=text-muted"><%= featured[0].author %></p>
+            <p class=text-muted"><%= featured[0].pub_date %></p>
+            <p> <%= featured[0].intro %></p>
+            <p>
+                <button onclick="playHomeAudio()">
+                    <span class="glyphicon glyphicon-play"></span>
+                    <span class="glyphicon glyphicon-pause"></span>
+                </button>
+                <button onclick="stopHomeAudio()">
+                    <span class="glyphicon glyphicon-stop"></span>
+                </button>
+                <button onclick="">
+                    <b>Like</b>
+                </button>
+            </p>
         </div>
         <div class="panel-footer">
             <p class=text-muted">RSS: <%= featured[0].rss %></p>

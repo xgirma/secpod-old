@@ -27,15 +27,16 @@
                         <p><%= podcast[i].intro %></p>
                         <p class="text-muted">RSS: <%= podcast[i].rss %></p>
                         <p>
-                            <a onclick="return playSelected('<%= podcast[i].audio %>', '<%= podcast[i].title %>')">
+                            <button onclick="return playListAudioFromList('<%= podcast[i].audio %>', '<%= podcast[i].title %>')">
                                 <span class="glyphicon glyphicon-play"></span>
-                            </a>
-                            <a onclick="return stopSelected()">
+                                <span class="glyphicon glyphicon-pause"></span>
+                            </button>
+                            <button onclick="stopListAudio()">
                                 <span class="glyphicon glyphicon-stop"></span>
-                            </a>
-                            <a onclick="return stopSelected()">
-                                Like
-                            </a>
+                            </button>
+                            <button onclick="">
+                                <b>Like</b>
+                            </button>
                         </p>
                     </div>
                 </div>

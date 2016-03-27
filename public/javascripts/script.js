@@ -1,41 +1,58 @@
 /* home page */
-var homeaudio = document.getElementById('homenaveaudio');
+var homeAudio = document.getElementById('homenaveaudio');
 
-function playFeatured() {
-  homeaudio.load();
-  homeaudio.play();
+function playHomeAudio() {
+  if(homeAudio.paused){
+    homeAudio.play();
+  } else {
+    homeAudio.pause();
+  }
 }
 
-function stopFeatured() {
-  homeaudio.pause();
+function stopHomeAudio() {
+  homeAudio.pause();
+  homeAudio.currentTime = 0;
 }
 
 /* list page */
-var listaudio = document.getElementById('selected-audio');
-var listtitle = document.getElementById('selected-title');
-var nowplaying = document.getElementById('now-playing');
+var listAudio = document.getElementById('selected-audio');
+var listTitle = document.getElementById('selected-title');
+var nowPlaying = document.getElementById('now-playing');
 
-function playSelected(audio, title) {
-  console.log(' ... ', audio);
-  console.log(' ... ', title);
-  listaudio.setAttribute('src', audio);
-  listaudio.load();
-  listtitle.innerHTML = title;
-  listaudio.play();
-  nowplaying.style.display = "block";
+function playListAudioFromList(audio, title) {
+  if(getCurrentListAudio() !== audio){
+    listAudio.setAttribute('src', audio);
+    listAudio.load();
+    listTitle.innerHTML = title;
+    nowPlaying.style.display = "block";
+    listAudio.play();
+  }
+
+  else if (getCurrentListAudio() === audio) {
+    if (listAudio.paused) {
+      listAudio.play();
+    } else {
+      listAudio.pause();
+    }
+  }
 }
 
-function stopSelected() {
-  listaudio.pause();
-  nowplaying.style.display = "none";
+function playListAudioFromNav(){
+  if(listAudio.paused){
+    listAudio.play();
+  } else {
+    listAudio.pause();
+  }
 }
 
-function getSelectedAudio(){
-  return listaudio.getAttribute('src');
+function stopListAudio() {
+  listAudio.pause();
+  nowPlaying.style.display = "none";
+  listAudio.currentTime = 0;
 }
 
-function getSelectedTitle(){
-  return listtitle.innerHTML;
+function getCurrentListAudio() {
+  return listAudio.getAttribute('src');
 }
 
 
