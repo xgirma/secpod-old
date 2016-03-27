@@ -1,9 +1,12 @@
 <div role="tabepanel" class="tab-pane active" id="featured">
     <br>
-    <p>  </p>
     <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <%= featured[0].title %>
+            </h4>
+        </div>
         <div class="panel-body">
-            <h2 class="panel-title"> <%= featured[0].title %></h2>
             <p class=text-muted"><%= featured[0].author %></p>
             <p class=text-muted"><%= featured[0].pub_date %></p>
             <p> <%= featured[0].intro %></p>
