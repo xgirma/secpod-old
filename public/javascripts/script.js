@@ -20,11 +20,11 @@ var listTitle = document.getElementById('selected-title');
 var nowPlaying = document.getElementById('now-playing');
 
 function playListAudioFromList(audio, title) {
+  nowPlaying.style.display = "block";
   if(getCurrentListAudio() !== audio){
     listAudio.setAttribute('src', audio);
     listAudio.load();
     listTitle.innerHTML = title;
-    nowPlaying.style.display = "block";
     listAudio.play();
   }
 
@@ -38,6 +38,7 @@ function playListAudioFromList(audio, title) {
 }
 
 function playListAudioFromNav(){
+  nowPlaying.style.display = "block";
   if(listAudio.paused){
     listAudio.play();
   } else {
