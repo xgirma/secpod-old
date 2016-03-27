@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var db = require('./db');
-var url = 'mongodb://podcast:p0dc45t@ds015889.mlab.com:15889/podcast';
+var url = 'mongodb://secpood:53cpo0d@ds025429.mlab.com:25429/secpood';
 
 var app = express();
 
