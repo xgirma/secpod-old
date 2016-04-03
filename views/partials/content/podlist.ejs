@@ -26,18 +26,20 @@
                         <p class="text-muted"><%= podcast[i].date %></p>
                         <p><%= podcast[i].intro %></p>
                         <p class="text-muted">RSS: <%= podcast[i].rss %></p>
-                        <p>
-                            <button onclick="return playListAudioFromList('<%= podcast[i].audio %>', '<%= podcast[i].title %>')">
+                        <!--<p>-->
+                            <button onclick="return playListAudioFromList('<%= podcast[i].audio %>', '<%= podcast[i].title %>')"
+                                    class="btn btn-default btn-xs">
                                 <span class="glyphicon glyphicon-play"></span>
                                 <span class="glyphicon glyphicon-pause"></span>
                             </button>
-                            <button onclick="stopListAudio()">
+                            <button onclick="stopListAudio()" class="btn btn-default btn-xs">
                                 <span class="glyphicon glyphicon-stop"></span>
                             </button>
-                            <button onclick="">
-                                <b>Like</b>
-                            </button>
-                        </p>
+                            <form action="/list" method="post" style="display: inline;">
+                                <input type="hidden" name="id" type="number" value="<%= podcast[0]._id %>"/>
+                                <input type="Submit" value="Like" class="btn btn-default btn-xs">
+                            </form>
+                        <!--</p>-->
                     </div>
                 </div>
             </div>

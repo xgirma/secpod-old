@@ -1,10 +1,11 @@
 var MongoClient = require('mongodb').MongoClient;
+var url = 'mongodb://secpood:53cpo0d@ds025429.mlab.com:25429/secpood';
 
 var state = {
     db: null
 };
 
-exports.connect = function(url, done){
+exports.connect = function(done){
     if(state.db){
         console.log('Mongodb connection exist');
         return done();

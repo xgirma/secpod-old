@@ -37,4 +37,23 @@ router.get('/list', function(req, res, next) {
   });
 });
 
+// TODO stop page refresh on like
+router.post('/list', function(req, res, next) {
+  Podcast.like(req.body.id, function(err, docs) {
+    if (err) {
+      console.log('Error finding doc ...', err);
+    }
+    res.redirect('list');
+  });
+});
+
+router.post('/', function(req, res, next) {
+  Podcast.like(req.body.id, function(err, docs) {
+    if (err) {
+      console.log('Error finding doc ...', err);
+    }
+    res.redirect('/');
+  });
+});
+
 module.exports = router;
