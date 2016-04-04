@@ -22,29 +22,6 @@ router.get('/', function (req, res, next) {
   });
 });
 
-router.get('/list', function (req, res, next) {
-  Podcast.all(function (err, docs) {
-    if (err) {
-      console.log('Error finding doc ...');
-    }
-    res.render('list', {
-      page: 'list',
-      title: 'Directory',
-      podcast: docs
-    });
-  });
-});
-
-// TODO stop page refresh on like
-router.post('/list', function (req, res, next) {
-  Podcast.like(req.body.id, function (err, docs) {
-    if (err) {
-      console.log('Error finding doc ...', err);
-    }
-    res.redirect('list');
-  });
-});
-
 router.post('/', function (req, res, next) {
   Podcast.like(req.body.id, function (err, docs) {
     if (err) {
