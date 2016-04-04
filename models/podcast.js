@@ -35,6 +35,23 @@ exports.featured = function (cb) {
   });
 };
 
+
+exports.topTen = function (cb) {
+  MongoClient.connect(url, function (err, db) {
+    assert.equal(null, err);
+
+    db.collection('podcast')
+      .find()
+      .sort({"like": -1, "author": 1})
+      .limit(10)
+      .toArray(function (err, docs) {
+        assert.equal(null, err);
+        db.close();
+        cb(err, docs);
+      });
+  });
+};
+
 exports.rated = function (cb) {
   MongoClient.connect(url, function (err, db) {
     assert.equal(null, err);
