@@ -1,0 +1,25 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1> <span class="glyphicon glyphicon-equalizer"></span>Secpood</h1>
+        <div class="row">
+            <div class="col-md-9">
+                <p>A directory of selected information security podcasts.</p>
+                <footer><%= featured[0].title %></footer>
+                <button onclick="playHomeAudio()" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-play"></span>
+                    <span class="glyphicon glyphicon-pause"></span>
+                </button>
+                <button onclick="stopHomeAudio()" class="btn btn-default btn-xs">
+                    <span class="glyphicon glyphicon-stop"></span>
+                </button>
+                <form action="/" method="post" style="display: inline;">
+                    <input type="hidden" name="id" type="number" value="<%= featured[0]._id %>"/>
+                    <input type="Submit" value="Like" class="btn btn-default btn-xs">
+                </form> <sup><%= featured[0].like %></sup>
+            </div>
+            <div class="col-md-3">
+                <!-- TDOO add content, like a quote or picture -->
+            </div>
+        </div>
+    </div>
+</div>

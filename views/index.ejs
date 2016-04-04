@@ -3,10 +3,11 @@
 <head>
     <% include partials/template/head.ejs %>
 </head>
+
 <body>
 <div class="container-fluid">
     <% include partials/template/header.ejs %>
-    <% include partials/template/homejumbotron.ejs %>
+    <% include partials/template/home-nav.ejs %>
     <div class="row">
         <div class="col-md-8">
             <p>Made with: Nodejs, Expressjs, Mongodb, ejs</p>
@@ -15,8 +16,8 @@
                 <li role="tab"><a href="#news" role="tab" data-toggle="tab">About</a></li>
             </ul>
             <div class="tab-content">
-                <% include partials/content/featured.ejs%>
-                <% include partials/content/about.ejs%>
+                <% include partials/content/featured.ejs %>
+                <% include partials/content/about.ejs %>
             </div>
         </div>
         <div class="col-md-4">
