@@ -8,8 +8,7 @@
             <% if(selected.length > 0){ %>
             <% for(i = 0; i < selected.length; i++){ %>
             <p>
-                <span class="glyphicon glyphicon-thumbs-up"></span> <%= selected[i].like %>
-                <%= selected[i].author %>
+                <%= selected[i].author %> <sup><%= selected[i].like %></sup>
             </p>
             <% } %>
             <% } %>
