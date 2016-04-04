@@ -27,19 +27,19 @@
                         <p><%= podcast[i].intro %></p>
                         <p class="text-muted">RSS: <%= podcast[i].rss %></p>
                         <!--<p>-->
-                            <button onclick="return playListAudioFromList('<%= podcast[i].audio %>',
-                                    '<%= podcast[i].title %>', '<%= podcast[i].like %>')"
-                                    class="btn btn-default btn-xs">
-                                <span class="glyphicon glyphicon-play"></span>
-                                <span class="glyphicon glyphicon-pause"></span>
-                            </button>
-                            <button onclick="stopListAudio()" class="btn btn-default btn-xs">
-                                <span class="glyphicon glyphicon-stop"></span>
-                            </button>
-                            <form action="/list" method="post" style="display: inline;">
-                                <input type="hidden" name="id" type="number" value="<%= podcast[i]._id %>"/>
-                                <input type="Submit" value="Like" class="btn btn-default btn-xs">
-                            </form><sup><%= podcast[i].like %></sup>
+                        <button onclick="return playListAudioFromList('<%= podcast[i].audio %>',
+                                '<%= podcast[i].title %>', '<%= podcast[i].like %>')"
+                                class="btn btn-default btn-xs">
+                            <span class="glyphicon glyphicon-play"></span>
+                            <span class="glyphicon glyphicon-pause"></span>
+                        </button>
+                        <button onclick="stopListAudio()" class="btn btn-default btn-xs">
+                            <span class="glyphicon glyphicon-stop"></span>
+                        </button>
+                        <form action="/list" method="post" style="display: inline;">
+                            <input type="hidden" name="id" type="number" value="<%= podcast[i]._id %>"/>
+                            <input type="Submit" value="Like" class="btn btn-default btn-xs">
+                        </form><sup><%= podcast[i].like %></sup>
                         <!--</p>-->
                     </div>
                 </div>

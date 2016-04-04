@@ -6,18 +6,22 @@
 <body class="<%= page %>">
 <div class="container-fluid">
     <% include partials/template/header.ejs %>
+    <div class=" row">
+        <div class="col-md-12">
+            <% include partials/template/list-nav.ejs %>
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-9">
-            <% include partials/template/listjumbotron.ejs %>
-            <% include partials/content/podlist.ejs %>
+            <% include partials/content/pod-list.ejs %>
         </div>
         <div class="col-md-3">
-            <% include partials/content/podlinks.ejs %>
+            <% include partials/content/pod-sites.ejs %>
         </div>
     </div>
 
     <% include partials/template/footer.ejs %>
-    <% include partials/template/jsdefaults.ejs %>
+    <% include partials/template/js-defaults.ejs %>
 </div>
 </body>
 </html>
