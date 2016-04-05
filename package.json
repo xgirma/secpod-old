@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/xgirma/secpod#readme",
   "devDependencies": {
+    "jshint": "^2.9.1",
     "nodemon": "^1.9.1"
   },
   "dependencies": {
