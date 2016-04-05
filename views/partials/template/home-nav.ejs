@@ -5,6 +5,9 @@
             <div class="col-md-9">
                 <p>A directory of selected information security podcasts.</p>
                 <footer><%= featured[0].title %></footer>
+                <audio id="homenaveaudio" src="<%= featured[0].audio %>">
+                    Your browser does not support the audio element.
+                </audio>
                 <button onclick="playHomeAudio()" class="btn btn-default btn-xs">
                     <span class="glyphicon glyphicon-play"></span>
                     <span class="glyphicon glyphicon-pause"></span>
