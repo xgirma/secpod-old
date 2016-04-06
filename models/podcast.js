@@ -53,6 +53,7 @@ exports.topTen = function (cb) {
   });
 };
 
+// TODO remove
 exports.rated = function (cb) {
   MongoClient.connect(url, function (err, db) {
     assert.equal(null, err);
@@ -82,6 +83,22 @@ exports.like = function (id, cb) {
         }
           db.close();
           cb(err);
+      });
+  });
+};
+
+exports.etc = function (cb) {
+  MongoClient.connect(url, function (err, db) {
+    assert.equal(null, err);
+
+    db.collection('podsites')
+      .find()
+      .sort({'name': 1})
+      .toArray(function (err, docs) {
+        assert.equal(null, err);
+        console.log('...........', docs);
+        db.close();
+        cb(err, docs);
       });
   });
 };

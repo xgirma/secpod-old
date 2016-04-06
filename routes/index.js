@@ -38,10 +38,13 @@ router.get('/list', function (req, res, next) {
     if (err) {
       console.log('Error finding doc ...');
     }
-    res.render('list', {
-      page: 'list',
-      title: 'Directory',
-      podcast: docs
+    Podcast.etc(function (err, sites) {
+      res.render('list', {
+        page: 'list',
+        title: 'Directory',
+        podcast: docs,
+        sites: sites
+      })
     });
   });
 });
