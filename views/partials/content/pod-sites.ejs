@@ -6,7 +6,14 @@
         <% if(sites.length > 0){ %>
         <% for(var i = 0; i < sites.length; i++){ %>
         <ul class="list-unstyled">
-            <li><%= sites[i].name %></li>
+            <li>
+                <%= sites[i].name %>,
+                <a href="<%= sites[i].rss %>" target="_blank">
+                    rss
+                </a>,  <a href="<%= sites[i].url %>" target="_blank">
+                    site
+                </a>
+            </li>
         </ul>
         <% } %>
         <% } %>
