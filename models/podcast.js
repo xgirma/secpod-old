@@ -96,7 +96,6 @@ exports.etc = function (cb) {
       .sort({'name': 1})
       .toArray(function (err, docs) {
         assert.equal(null, err);
-        console.log('...........', docs);
         db.close();
         cb(err, docs);
       });
