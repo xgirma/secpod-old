@@ -1,3 +1,5 @@
+'use strict';
+
 /* home page */
 var homeAudio = document.getElementById('homenaveaudio');
 

@@ -1,3 +1,5 @@
+'use strict';
+
 var MongoClient = require('mongodb').MongoClient;
 var url = 'mongodb://secpood:53cpo0d@ds025429.mlab.com:25429/secpood';
 
@@ -29,7 +31,7 @@ exports.get = function(){
 
 exports.close = function(){
     if(state.db){
-        state.db.close(function(err, result){
+        state.db.close(function(err){
             if(err){
                 console.log('Unable to mongodb');
             }
