@@ -24,8 +24,9 @@
                             <%= podcast[i].author %>
                         </p>
                         <p class="text-muted"><%= podcast[i].date %></p>
-                        <p><%= podcast[i].intro %></p>
+                        <p> <%- podcastIntro[i] %></p>
                         <p class="text-muted">RSS: <%= podcast[i].rss %></p>
+                        <p class="text-muted" >Source: <a href=<%= podcast[i].link %> target="_blank"><%= podcast[i].author %></a></p>
                         <!--<p>-->
                         <button onclick="return playListAudioFromList('<%= podcast[i].audio %>',
                                 '<%= podcast[i].title %>', '<%= podcast[i].like %>')"

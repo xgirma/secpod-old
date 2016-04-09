@@ -3,6 +3,7 @@
 var express = require('express');
 var router = express.Router();
 var Podcast = require('../models/podcast');
+var Encoder = require('node-html-encoder').Encoder;
 
 router.get('/', function (req, res, next) {
   Podcast.topTen(function (err, top) {
@@ -34,15 +35,22 @@ router.post('/', function (req, res, next) {
 });
 
 router.get('/list', function (req, res, next) {
+  var encoder = new Encoder('entity');
+  var note = [];
+
   Podcast.all(function (err, docs) {
     if (err) {
       console.log('Error finding doc ...');
     }
     Podcast.etc(function (err, sites) {
+      for(var i=0; i < docs.length; i++){
+        note.push(encoder.htmlDecode(docs[i].intro));
+      }
       res.render('list', {
         page: 'list',
         title: 'Directory',
         podcast: docs,
+        podcastIntro: note,
         sites: sites
       })
     });

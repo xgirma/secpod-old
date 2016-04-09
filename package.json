@@ -28,8 +28,10 @@
     "debug": "~2.2.0",
     "ejs": "~2.3.3",
     "express": "~4.13.1",
+    "he": "^1.0.0",
     "mongodb": "^2.1.7",
     "morgan": "~1.6.1",
+    "node-html-encoder": "0.0.2",
     "serve-favicon": "^2.3.0"
   }
 }
