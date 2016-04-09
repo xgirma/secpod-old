@@ -6,6 +6,9 @@ var Podcast = require('../models/podcast');
 var Encoder = require('node-html-encoder').Encoder;
 
 router.get('/', function (req, res, next) {
+  var encoder = new Encoder('entity');
+  var note = [];
+
   Podcast.topTen(function (err, top) {
     if (err) {
       console.log('Error finding docs with 5 star')
@@ -15,10 +18,16 @@ router.get('/', function (req, res, next) {
       if (err) {
         console.log('Error finding a random doc ...');
       }
+
+      for(var i=0; i < doc.length; i++){
+        note.push(encoder.htmlDecode(doc[i].intro));
+      }
+
       res.render('index', {
         page: 'index',
         title: 'Security Podcast Directory',
         featured: doc,
+        featuredIntro: note,
         selected: top
       });
     });

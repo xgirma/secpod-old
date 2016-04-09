@@ -11,7 +11,7 @@ exports.all = function (cb) {
 
     db.collection('podcast')
       .find()
-      .sort({'_id': 1})
+      .sort({'date': -1})
       .toArray(function (err, docs) {
         assert.equal(null, err);
         db.close();
@@ -27,7 +27,7 @@ exports.featured = function (cb) {
     db.collection('podcast')
       .find()
       .limit(1)
-      .skip(Math.floor(Math.random() * 18))
+      .skip(Math.floor(Math.random() * 400))
       .toArray(function (err, docs) {
         assert.equal(null, err);
         db.close();
