@@ -7,17 +7,16 @@
         <% for(var i = 0; i < sites.length; i++){ %>
         <ul class="list-unstyled">
             <li>
-                <form>
+                <form  style="display: inline;">
                     <button onclick="stopHomeAudio()" class="btn btn-default btn-xs">
                         <span class="glyphicon glyphicon-refresh"></span>
                     </button>
+                </form>
+                <p  style="display: inline;">
                     <a href="<%= sites[i].url %>" target="_blank" class="text-muted">
                         <%= sites[i].name %>
                     </a>
-                    <a href="<%= sites[i].rss %>" target="_blank" class="text-muted" >
-                        rss
-                    </a>
-                </form>
+                </p>
             </li>
         </ul>
         <% } %>
