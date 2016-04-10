@@ -27,7 +27,7 @@ exports.featured = function (cb) {
     db.collection('podcast')
       .find()
       .limit(1)
-      .skip(Math.floor(Math.random() * 400))
+      .skip(Math.floor(Math.random() * 700))
       .toArray(function (err, docs) {
         assert.equal(null, err);
         db.close();
