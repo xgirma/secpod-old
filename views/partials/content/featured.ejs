@@ -10,6 +10,7 @@
             <p class=text-muted"><%= featured[0].author %></p>
             <p class=text-muted"><%= featured[0].date %></p>
             <p> <%- featuredIntro[0] %></p>
+            <p class="text-muted" >Source: <a href=<%= featured[0].link %> target="_blank"><%= featured[0].author %></a></p>
                 <button onclick="playHomeAudio()" class="btn btn-default btn-xs">
                     <span class="glyphicon glyphicon-play"></span>
                     <span class="glyphicon glyphicon-pause"></span>
@@ -21,6 +22,7 @@
                     <input type="hidden" name="id" type="number" value="<%= featured[0]._id %>"/>
                     <input type="Submit" value="Like" class="btn btn-default btn-xs">
                 </form><sup><%= featured[0].like %></sup>
+
         </div>
         <div class="panel-footer">
             <p class=text-muted">RSS: <%= featured[0].rss %></p>
