@@ -67,12 +67,25 @@ router.get('/list', function (req, res, next) {
 });
 
 router.post('/list', function (req, res, next) {
-  Podcast.like(req.body.id, function (err, docs) {
-    if (err) {
-      console.log('Error finding doc ...', err);
+  if(req.body.id !== null && req.body.id !== undefined){
+    Podcast.like(req.body.id, function (err, docs) {
+      if (err) {
+        console.log('Error finding doc ...', err);
+      }
+      res.redirect('list');
+    });
+  } else if(req.body.rss !== null && req.body.rss !== undefined){
+    if(req.body.valid === "true"){
+      Podcast.refresh(req.body.rss, function(err, docs){
+        if(err){
+          console.log('unable to pudate', err);
+        }
+        res.redirect('list');
+      });
+    } else {
+      res.redirect('list');
     }
-    res.redirect('list');
-  });
+  }
 });
 
 module.exports = router;

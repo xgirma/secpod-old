@@ -7,8 +7,10 @@
         <% for(var i = 0; i < sites.length; i++){ %>
         <ul class="list-unstyled">
             <li>
-                <form  style="display: inline;">
-                    <button onclick="stopHomeAudio()" class="btn btn-default btn-xs">
+                <form  action='/list' method="post" style="display: inline;">
+                    <input type="hidden" name="rss" type="string" value="<%= sites[i].rss %>"/>
+                    <input type="hidden" name="valid" type="string" value="<%= sites[i].refresh %>"/>
+                    <button type="submit" class="btn btn-default btn-xs">
                         <span class="glyphicon glyphicon-refresh"></span>
                     </button>
                 </form>

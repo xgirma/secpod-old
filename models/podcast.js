@@ -5,6 +5,8 @@ var ObjectID = require('mongodb').ObjectID;
 var assert = require('assert');
 var url = 'mongodb://secpood:53cpo0d@ds025429.mlab.com:25429/secpood';
 var Encoder = require('node-html-encoder').Encoder;
+var request = require('request');
+var parser = require('podparser');
 
 exports.all = function (cb) {
   MongoClient.connect(url, function (err, db) {
@@ -28,7 +30,7 @@ exports.featured = function (cb) {
     db.collection('podcast')
       .find()
       .limit(1)
-      .skip(Math.floor(Math.random() * 700))
+      .skip(Math.floor(Math.random() * 750))
       .toArray(function (err, docs) {
         assert.equal(null, err);
         db.close();
@@ -51,16 +53,6 @@ exports.topTen = function (cb) {
         db.close();
         cb(err, docs);
       });
-  });
-};
-
-exports.updatedb = function (feed, cb) {
-  MongoClient.connect(url, function (err, db) {
-    assert.equal(null, err);
-
-    insertDocument(feed, db, function() {
-      // db.close();
-    });
   });
 };
 
@@ -96,7 +88,16 @@ exports.etc = function (cb) {
   });
 };
 
-var insertDocument = function (feed, db, callback) {
+exports.refresh = function (feed, cb) {
+  MongoClient.connect(url, function (err, db) {
+    assert.equal(null, err);
+
+    insertDocument(feed, db, cb, function(){
+    });
+  });
+};
+
+var insertDocument = function (feed, db, cb) {
   var encoder = new Encoder('entity');
   var author = 'no author';
   var title = 'not title';
@@ -107,8 +108,7 @@ var insertDocument = function (feed, db, callback) {
   var intro = 'no intro';
   var like = 0;
 
-
-  request(rssMe, function (error, resp, body) {
+  request(feed, function (error, resp, body) {
     parser(body, function (error, ret) {
       for (var i = 0; i <= (ret.items.length - 1); i++) {
 
@@ -121,9 +121,11 @@ var insertDocument = function (feed, db, callback) {
         intro = encoder.htmlEncode(ret.items[i].description) ;
         like = 0;
 
-        db.collection('podcast').update({
+        db.collection('podcast').update(
+          {
             "audio": audio
-          }, {
+          },
+          {
             "author": author,
             "title": title,
             "date": pubDate,
@@ -139,9 +141,11 @@ var insertDocument = function (feed, db, callback) {
 
           function (err, result) {
             assert.equal(err, null);
-            callback();
+            console.log(feed, ' updated');
           });
       }
     });
+    //db.close();
+    cb(error);
   });
 };

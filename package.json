@@ -32,6 +32,8 @@
     "mongodb": "^2.1.7",
     "morgan": "~1.6.1",
     "node-html-encoder": "0.0.2",
+    "podparser": "^1.0.5",
+    "request": "^2.70.0",
     "serve-favicon": "^2.3.0"
   }
 }
