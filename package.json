@@ -28,7 +28,7 @@
     "debug": "~2.6.0",
     "ejs": "2.5.7",
     "express": "^4.17.1",
-    "mongodb": "2.2.35",
+    "mongodb": "2.2.36",
     "morgan": "~1.9.0",
     "node-html-encoder": "0.0.2",
     "podparser": "1.0.5",
