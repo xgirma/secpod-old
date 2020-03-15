@@ -33,6 +33,6 @@
     "node-html-encoder": "0.0.2",
     "podparser": "1.0.5",
     "request": "2.83.0",
-    "serve-favicon": "2.4.5"
+    "serve-favicon": "2.5.0"
   }
 }
