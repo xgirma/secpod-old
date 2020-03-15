@@ -32,7 +32,7 @@
     "morgan": "~1.9.0",
     "node-html-encoder": "0.0.2",
     "podparser": "1.0.5",
-    "request": "2.83.0",
+    "request": "2.88.2",
     "serve-favicon": "2.4.5"
   }
 }
