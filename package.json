@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/xgirma/secpod#readme",
   "devDependencies": {
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-jshint": "2.1.0",
     "jshint": "^2.11.0",
     "nodemon": "1.17.1"
